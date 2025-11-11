@@ -18,8 +18,8 @@ print(f"the sorted list is " , selection(emp_sal,n))
 def bubble(A,n):
     for i in range(n-1):
         for j in range(n-i-1):
-            if A[j] > A[j+1]:        # compare adjacent elements
-                A[j], A[j+1] = A[j+1], A[j]  # swap
+            if A[j] > A[j+1]:        
+                A[j], A[j+1] = A[j+1], A[j]  
     return A
 
 print("Sorted Salaries:", bubble(emp_sal, n))
