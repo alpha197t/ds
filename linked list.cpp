@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Structure to store student data
+
 struct Student {
     int rollNo;
     string name;
@@ -9,10 +9,10 @@ struct Student {
     Student* next;
 };
 
-// Head pointer for the linked list
+
 Student* head = NULL;
 
-// Function to add a new student
+
 void addStudent(int rollNo, string name, float marks) {
     Student* newStudent = new Student;
     newStudent->rollNo = rollNo;
@@ -31,7 +31,7 @@ void addStudent(int rollNo, string name, float marks) {
     cout << "Student record added successfully!\n";
 }
 
-// Function to delete a student by roll number
+
 void deleteStudent(int rollNo) {
     if (head == NULL) {
         cout << "No records found.\n";
@@ -41,7 +41,7 @@ void deleteStudent(int rollNo) {
     Student* temp = head;
     Student* prev = NULL;
 
-    // if the head itself is the student to delete
+    
     if (temp != NULL && temp->rollNo == rollNo) {
         head = temp->next;
         delete temp;
@@ -49,7 +49,7 @@ void deleteStudent(int rollNo) {
         return;
     }
 
-    // Search for the student to delete
+    
     while (temp != NULL && temp->rollNo != rollNo) {
         prev = temp;
         temp = temp->next;
@@ -65,7 +65,7 @@ void deleteStudent(int rollNo) {
     cout << "Record deleted successfully.\n";
 }
 
-// Function to update a student's record
+
 void updateStudent(int rollNo) {
     Student* temp = head;
     while (temp != NULL) {
@@ -82,7 +82,7 @@ void updateStudent(int rollNo) {
     cout << "Record not found.\n";
 }
 
-// Function to search for a student
+
 void searchStudent(int rollNo) {
     Student* temp = head;
     while (temp != NULL) {
@@ -98,7 +98,7 @@ void searchStudent(int rollNo) {
     cout << "Record not found.\n";
 }
 
-// Function to display all records
+
 void display() {
     if (head == NULL) {
         cout << "No records to display.\n";
